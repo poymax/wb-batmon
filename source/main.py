@@ -88,7 +88,7 @@ while True:
             for slave in range(0, slaves):
                 deviation = round(abs(voltages[slave] - average_voltage), 2) if average_voltage else 0
                 publish_control(data=deviation,
-                                name='SL{} voltage deviation'.format(slave+1),
+                                name='SL{}_voltage_deviation'.format(slave+1),
                                 data_type='voltage',
                                 # order=7,
                                 error='' if average_voltage else 'r')
